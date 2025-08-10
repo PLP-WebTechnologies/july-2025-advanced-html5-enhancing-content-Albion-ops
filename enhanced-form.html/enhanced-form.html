@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase Page – Lists, Tables, Media & Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        header, nav, section, footer {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        header, footer {
+            background-color: #004080;
+            color: #fff;
+            border-radius: 6px;
+        }
+        nav {
+            background-color: #fff;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #004080;
+        }
+        section {
+            background-color: #fff;
+            border-radius: 6px;
+            margin-top: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        th {
+            background-color: #e6f0ff;
+        }
+        img, video {
+            max-width: 100%;
+            border-radius: 6px;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+            color: #004080;
+        }
+        label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #004080;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00264d;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Starlet Showcase Page</h1>
+    <p>Demonstrating Various services offered by Starlet</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#table">Table</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="lists">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Web Development</li>
+        <li>IT Infrastructure</li>
+        <li>Cybersecurity Solutions</li>
+        <li>Point of Sale Systems</li>
+    </ul>
+
+    <h3>Project Steps</h3>
+    <ol>
+        <li>Requirement Gathering</li>
+        <li>Design & Prototyping</li>
+        <li>Development</li>
+        <li>Testing & Deployment</li>
+    </ol>
+</section>
+
+<section id="table">
+    <h2>Pricing Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Service</th>
+                <th>Package</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Web Development</td>
+                <td>Basic</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>IT Infrastructure</td>
+                <td>Enterprise</td>
+                <td>$2000</td>
+            </tr>
+            <tr>
+                <td>POS System</td>
+                <td>Standard</td>
+                <td>$1200</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="media">
+    <h2>Media Showcase</h2>
+    <h3>Promotional Video</h3>
+    <video controls>
+        <source src="sample-video.mp4" type="video/mp4">
+        Your browser does not support video playback.
+    </video>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="John Doe" required minlength="3">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="1234567890" pattern="[0-9]{10}" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Service Inquiry</legend>
+            
+            <label for="service">Select Service:</label>
+            <select id="service" name="service" required>
+                <option value="">-- Please Choose --</option>
+                <option value="web">Web Development</option>
+                <option value="it">IT Infrastructure</option>
+                <option value="pos">POS Systems</option>
+            </select>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" minlength="10" placeholder="Enter your inquiry..." required></textarea>
+
+            <label>Preferred Contact Method:</label>
+            <label><input type="radio" name="contact_method" value="email" required> Email</label>
+            <label><input type="radio" name="contact_method" value="phone"> Phone</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Subscription</legend>
+            <label>
+                <input type="checkbox" name="subscribe" value="yes"> Subscribe to our newsletter
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>System Info (Read-only Example)</legend>
+            <label for="customer-id">Customer ID:</label>
+            <input type="text" id="customer-id" name="customer-id" value="SYS-00123" readonly>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 George Koikai. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
